@@ -1,0 +1,84 @@
+<div class="featured-event">
+    <div class="row">
+        <div class="col-xs-8 eventhead">
+           
+            <h2>{{alldata.title}}</h2>
+            <p>{{alldata.organizername}}</p>
+            <p>From : {{alldata.startdate}} AT : {{alldata.starttime}}</p>
+            <p>To : {{alldata.enddate}} AT : {{alldata.endtime}}</p>
+            <p>Location : {{alldata.location}}</p>
+        </div>
+        <div class="col-xs-4 eventlogo">
+            <img src="img/logo.png" class="img-responsive">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-8">
+            <div class="eventdetails eventform">
+                <h3>Sponsor's Detail</h3>
+                
+
+        <div class="row pad">
+            <div class="col-xs-2">
+                <label class="pull-right">Email</label>
+            </div>
+            <div class="col-xs-10">
+                <input type="text" placeholder="{{user.email}}" disabled>
+            </div>
+        </div>
+        
+        <div class="row pad">
+            <div class="col-xs-2">
+                <label class="pull-right">Amount</label>
+            </div>
+            <div class="col-xs-10">
+                <input type="hidden" ng-model="form.user">
+                <input type="hidden" ng-model="form.event">
+                <input type="text" ng-model="form.amountsponsor" placeholder="$0">
+            </div>
+        </div>
+            
+        <div class="row pad">
+            <div class="col-xs-2">
+                <label class="pull-right">Banner</label>
+            </div>
+            <div class="col-xs-10">
+                <img src="eglapp/{{form.image}}">
+                <iframe class="myiframe" src="{{ipath}}"+ width="250px" height="200px" border="0"> </iframe>
+            </div>
+        </div>
+            
+        <div class="eventform text-center final">
+        <button class="btn btn-success" ng-click="savesponsor(form)">Done</button>
+    </div>
+
+            </div>
+
+            <div class="eventdetails">
+                <h3>Event details</h3>
+                <p ng-bind-html="alldata.description"></p>
+             </div>
+        </div>
+        <div class="col-xs-4">
+            
+            <div class="eventdetails">
+                <h3>When</h3>
+                <p>From : {{alldata.startdate}} AT : {{alldata.starttime}}</p>
+            <p>To : {{alldata.enddate}} AT : {{alldata.endtime}}</p>
+            <p>Location : {{alldata.location}}</p>
+            </div>
+
+            <div class="eventdetails">
+                <h3>Oraganiser</h3>
+                <h4>{{alldata.organizername}}</h4>
+                <p ng-bind-html="alldata.orgdescription"></p>
+            </div>
+            
+           
+            
+        </div>
+        
+    </div>
+    
+
+</div>

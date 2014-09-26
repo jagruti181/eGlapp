@@ -1,0 +1,80 @@
+<div class="featured-event">
+    <h3>Manage Organizer Profile</h3>
+
+    <div class="row">
+        <div class="pull-right eventform">
+            
+            <button class="btn btn-success">Save</button>
+            <button class="btn">View Profile</button>
+            
+        </div>
+    </div>
+    <div class="row profile">
+       
+        {{test}}
+      
+        <div class="col-xs-6">
+            <div class="pad">
+               
+                <label>Organizer name</label>
+                <br>
+                <input type="hidden" placeholder="id" ng-model="organizer.id">
+                <input type="text" placeholder="Name of Organizer" ng-model="organizer.firstname">
+            </div>
+            <div class="pad">
+                <label>Organizer logo</label>
+                <br>
+                <div class="row">
+                    <div class="col-xs-5">
+                        <img src="https://ebmedia.eventbrite.com/s3-build/20650-rc2014-06-09-bceef4f/django/images/icons/default-organizer-logo.png" class="img-thumbnail">
+                    </div>
+                    <div class="col-xs-6">
+                        <p>Your image must be JPG, GIF, or PNG format and not exceed 1MB. It will be resized to make its width 225px.</p>
+                        <input type="file" ng-model="organizer.logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="pad eventform profile">
+                <label>About the organizer</label>
+                <button ng-click="disabled = !disabled" unselectable>Disable text-angular Toggle</button>
+                <div text-angular="text-angular" name="htmlcontent" ng-model="organizer.description" ta-disabled='disabled'></div>
+            </div>
+        </div>
+    </div>
+    <h4>Optional Organizer settings</h4>
+    <div class="row profile">
+        <div class="col-xs-6">
+            <div class="pad">
+                <label>Organizer info:</label>
+                <br>
+                <p>
+                    <input type="checkbox" name="1" ng-model="organizer.showwebsite" value="organizer.showwebsite" checked>Show my website
+                    <br>
+                    <input type="checkbox" name="2" ng-model="organizer.eventsheld" value="organizer.eventsheld">Show number of events held
+                    <br>
+                    <input type="checkbox" name="3" ng-model="organizer.topeventlocation" value="organizer.topeventlocation">Show top event locations
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="pad eventform profile">
+                <label>Event info:</label>
+                <br>
+                <p>
+                    <input type="radio" name="1" ng-model="organizer.eventinfo" value="1" checked>Display only events by this organizer
+                    <br>
+                    <input type="radio" name="1" ng-model="organizer.eventinfo" value="2">Display all of my events
+                </p>
+                <label>Organize page URL:</label>
+                <br>
+                <a href="#">http://www.eglapp.com/yourprofile</a>
+            </div>
+        </div>
+        <div class="pull-right eventform">
+            <button class="btn btn-success" ng-click="saveorganizer(organizer)">Save</button>
+            <button class="btn">View Profile</button>
+        </div>
+    </div>
+</div>

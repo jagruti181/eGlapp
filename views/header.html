@@ -1,0 +1,23 @@
+<div class="header">
+    <div class="menu-top">
+        <div class="container2">
+           <span class="pull-left" ng-show="({{headerarray.preview}}=='1')"><!--a href="#/orderform">Manage</a> | --><a href="#/viewevents/{{form.id}}">Preview</a></span>
+            <span class="pull-right"><a href="#/{{headerarray.userprofile}}">{{headerarray.loginuser}}</a> | <a href="#/{{headerarray.logout}}">{{headerarray.signuplogout}}</a></span>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="row">
+            <a href="index.html">
+                <div class="col-xs-4 logo">
+                    <img src="img/logo.jpg">
+                </div>
+            </a>
+            <div ng-include="template.menu"></div>
+
+        </div>
+        
+    </div>
+</div>
+<div class="header" style="position:relative;
+                               visibility:hidden;
+                           "></div>

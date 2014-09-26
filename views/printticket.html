@@ -1,0 +1,43 @@
+<div id="print" class="featured-event">
+    <h3>My Tickets</h3>
+    <div class="row pad">
+        
+            <div class="col-xs-4">
+               <h3>{{printticket.title}}</h3>
+                <img src="eglapp/{{printticket.logo}}" width="200" >
+            </div>
+            <div class="col-xs-8">
+                <h4>{{printticket.firstname}} {{printticket.lastname}}</h4>
+                <h4>Time Details: {{printticket.startdate}} , {{printticket.starttime}} //{{printticket.enddate}} , {{printticket.endtime}}</h4>
+                <h4>{{printticket.location}}</h4>
+                <div class="col-xs-3">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data={{id}}">
+                </div>
+                <div class="col-xs-5">
+                    <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Ticket Category</th>
+                            <th>Ticket Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="value in printticket.usertickets">
+                            <td>{{value.ticket}}</td>
+                            <td>{{value.quantity}}</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <button class="btn btn-success" onClick="printDiv()">Print</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row pad">
+            <div class="col-xs-12">
+               <h3>Sponsor</h3>
+                <img src="eglapp/{{printticket.image}}" height="200px" width="500px">
+            </div>
+        </div>
+    </div>

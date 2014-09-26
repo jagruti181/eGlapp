@@ -1,0 +1,48 @@
+<div class="col-xs-3">
+    <div class="panel panel-default dashboard">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="">
+                    Manage Events
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <div ng-include="template.dashboard"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-xs-9">
+    <form action="">
+        <div class="orderform featured-event orderconfirm">
+            <h2 class="text-center">Order Confirmation</h2>
+            <h3>Customize Email</h3>
+            <p>Your attendees will receive an email after registration confirming their order.</p>
+            <label>Default 'reply-to' email address:</label>
+            <br>
+            <input type="email">
+            <br>
+            <label>Attachments:</label>
+            <p>
+                <input type="checkbox">Attach PDF tickets in confirmation email</p>
+            <label>Message to be displayed on PDF Ticket:</label>
+            <br>
+            <textarea class="textspace"></textarea>
+            <h3>Customize Order Confirmation Webpage</h3>
+            <p>Your attendees will also be taken to a confirmation page within their browser when their order is completed.
+                <br>
+                <strong>Redirect users to your own webpage</strong> once the order is processed, clear all of the text below and enter your website URL (including the http://)</p>
+            <label>Message to be displayed on confirmation webpage:</label>
+            <br>
+            <textarea class="textspace"></textarea>
+            <div class="savechanges">
+                <button class="btn btn-large btn-success" type="button">Save Changes</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="clearfix"></div>

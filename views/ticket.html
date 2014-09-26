@@ -1,0 +1,130 @@
+<form>
+    <div class="eventform">
+      <h2 class="text-center">Ticket Details</h2>
+        {{tickets}}
+       <div class="row pad"  ng-show="alldata.tickets!=0">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Category</th>
+                            <th>Type</th>
+                            <th>Remaing</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="ticket in alldata.tickets">
+                            <td >{{ticket.id}}</td>
+                            <td >{{ticket.tickettype}}</td>
+                            <td >{{ticket.ticket}}</td>
+                            <td >{{ticket.quantity}} Tickets</td>
+                            <td>
+                                <select ng-model="ticket.qty">
+                                    <option value="0">0&nbsp;</option>
+                                    <option value="1">1&nbsp;</option>
+                                    <option value="2">2&nbsp;</option>
+                                    <option value="3">3&nbsp;</option>
+                                    <option value="4">4&nbsp;</option>
+                                    <option value="5">5&nbsp;</option>
+                                    <option value="6">6&nbsp;</option>
+                                    <option value="7">7&nbsp;</option>
+                                    <option value="8">8&nbsp;</option>
+                                    <option value="9">9&nbsp;</option>
+                                    <option value="10">10&nbsp;</option>
+                                </select>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <div class="col-xs-1"></div>
+                
+            </div>
+            <hr>
+        <h2 class="text-center">User Details</h2>
+        {{uid}}
+           
+            <form name="form_constraints" enctype="multipart/form-data" class="form-validation" novalidate data-ng-submit="submitForm()">
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">First Name</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="hidden" id="title" placeholder="First Name" ng-model="user.id" required>
+                <input type="text" id="title" placeholder="First Name" ng-model="user.firstname" required>
+            </div>
+        </div>
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Last Name</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text" id="alias" placeholder="Last Name" ng-model="user.lastname" required>
+            </div>
+        </div>
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Address</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text" ng-model="user.address" id="venue" placeholder="Your Current Address">
+            </div>
+        </div>
+
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">City</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text"  placeholder="You'r City" ng-model="user.city">
+            </div>
+        </div>
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Date Of Birth</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="date" ng-model="user.dob" id="startdate" name="bdaytime" required>
+            </div>
+        </div>
+        
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Contact</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text"  placeholder="Contact Number" ng-model="user.contact">
+            </div>
+        </div>
+           
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Pincode</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text"  placeholder="Pincode" ng-model="user.pincode">
+            </div>
+        </div>
+
+    <hr>
+      
+       
+        
+        
+    
+            <div class="eventform text-center final">
+        <p>
+            <a class="btn btn-success" ng-click="saveticket(alldata.tickets,user)">Get Ticket</a>
+        </p>
+    </div>
+    
+
+</form>

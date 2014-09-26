@@ -1,0 +1,15 @@
+<div class="featured-event">
+    <h3>My Tickets</h3>
+    <div class="row pad">
+        <div class="col-xs-3 text-center" ng-repeat="ticket in data" ng-show="{{data}}!=false">
+           <a href="#/printticket/{{ticket.user}}/{{ticket.eventid}}">
+            <div class="evnt">
+                <img src="eglapp/{{ticket.logo}}" class="img-responsive">
+                <h4>{{ticket.eventtitle}}</h4>
+                <p>{{ticket.location}}</p>
+            </div>
+            </a>
+        </div>
+        
+        </div>
+    </div>

@@ -1,0 +1,340 @@
+<form >
+    <div class="eventform">
+        <h2 class="text-center">{{form.title}}</h2>
+       <!-- {{form}}
+        {{value}}-->
+           
+            <form name="form_constraints" enctype="multipart/form-data" class="form-validation" novalidate data-ng-submit="submitForm()">
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Event Title*</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text" id="title" placeholder="Give your event a short distinct name" ng-model="form.title" required>
+                <input type="hidden" id="title" placeholder="Give your event a short distinct name" ng-model="form.id" required>
+            </div>
+        </div>
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Event Title Alias*</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text" id="alias" placeholder="Give your event a short name which will be used in URL" ng-model="form.alias" required>
+            </div>
+        </div>
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Location</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text"  placeholder="Specify where your event will happen" ng-model="form.location">
+            </div>
+        </div>
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Venue</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text" ng-model="form.venue" id="venue" placeholder="Specify where your event will happen">
+            </div>
+        </div>
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Start Date*</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="date" ng-model="form.startdate" id="startDate" name="bdaytime" required>
+            </div>
+        </div>
+        
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Start Time*</label>
+            </div>
+            <div class="col-xs-9">
+                <select ng-model="form.starttime">					
+                    <option value="0:30">0:30</option>
+                    <option value="1:00">1:00</option>
+                    <option value="1:30">1:30</option>
+                    <option value="2:00">2:00</option>
+                    <option value="2:30">2:30</option>
+                    <option value="3:00">3:00</option>
+                    <option value="3:30">3:30</option>
+                    <option value="4:00">4:00</option>
+                    <option value="4:30">4:30</option>
+                    <option value="5:00">5:00</option>
+                    <option value="5:30">5:30</option>
+                    <option value="6:00">6:00</option>
+                    <option value="6:30">6:30</option>
+                    <option value="7:00">7:00</option>
+                    <option value="7:30">7:30</option>
+                    <option value="8:00">8:00</option>
+                    <option value="8:30">8:30</option>
+                    <option value="9:00">9:00</option>
+                    <option value="9:30">9:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:00">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30<">21:30</option>
+                    <option value="22:00">22:00</option>
+                    <option value="22:30">22:30</option>
+                    <option value="23:00">23:00</option>
+                    <option value="23:30">23:30</option>
+                    <option value="24:00">24:00</option>
+                    <option value="24:30">24:30</option>
+                 </select>	
+            </div>
+        </div>
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">End Date*</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="date" ng-model="form.enddate" id="endDate" name="bdaytime" required>
+            </div>
+        </div>
+        
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">End Time*</label>
+            </div>
+            <div class="col-xs-9">
+                <select ng-model="form.endtime">				
+                    <option value="0:30">0:30</option>
+                    <option value="1:00">1:00</option>
+                    <option value="1:30">1:30</option>
+                    <option value="2:00">2:00</option>
+                    <option value="2:30">2:30</option>
+                    <option value="3:00">3:00</option>
+                    <option value="3:30">3:30</option>
+                    <option value="4:00">4:00</option>
+                    <option value="4:30">4:30</option>
+                    <option value="5:00">5:00</option>
+                    <option value="5:30">5:30</option>
+                    <option value="6:00">6:00</option>
+                    <option value="6:30">6:30</option>
+                    <option value="7:00">7:00</option>
+                    <option value="7:30">7:30</option>
+                    <option value="8:00">8:00</option>
+                    <option value="8:30">8:30</option>
+                    <option value="9:00">9:00</option>
+                    <option value="9:30">9:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:00">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30<">21:30</option>
+                    <option value="22:00">22:00</option>
+                    <option value="22:30">22:30</option>
+                    <option value="23:00">23:00</option>
+                    <option value="23:30">23:30</option>
+                    <option value="24:00">24:00</option>
+                    <option value="24:30">24:30</option>
+                 </select>
+            </div>
+        </div>
+<!--################################################################################################################################-->
+<div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Event Logo</label>
+            </div>
+            <div class="col-xs-9">
+               <div class="row">
+                    <div class="col-xs-5">
+                        <img src="eglapp/{{form.logo}}" class="img-thumbnail">
+                    </div>
+                    <!--div class="col-xs-5">
+                    <img src="https://ebmedia.eventbrite.com/s3-build/20650-rc2014-06-09-bceef4f/django/images/icons/default-organizer-logo.png" class="img-thumbnail">
+                    </div-->
+                    <div class="col-xs-6">
+                        
+<!--//#########################################################3file upload-->
+                        
+                            <iframe class="myiframe" src="{{ipath}}"+ width="270px" height="260px" scrolling= "no" frameBorder="0"> </iframe>
+                        
+<!--//#########################################################3file upload-->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--################################################################################################################################-->
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Event Description</label>
+            </div>
+            <div class="col-xs-9">
+               <button ng-click="disabled = !disabled" unselectable>Disable text-angular Toggle</button>
+                <div text-angular="text-angular" name="htmlcontent" ng-model="form.description" ta-disabled='disabled'></div>
+            </div>
+        </div>
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Organiser Name</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text" ng-model="organizername" id="organiser" value="Unanmed Organiser" readonly>
+                <!--input type="text" ng-model="form.organizer" id="organizer" value="Unanmed Organiser"-->
+            </div>
+        </div>
+
+        <!--div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Organiser Description</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text" placeholder="">
+                <p>
+                    <input type="checkbox">Include links to Facebook and Twitter</p>
+            </div>
+        </div-->
+
+    </div>
+
+    <hr>
+    <div class="eventform text-center">
+        <h2>Create Tickets</h2>
+        <h4>What type of ticket would you like to start with?</h4>
+        <p>
+            <a style="background-color:#39b3d7;" class="btn btn-info" ng-click="addticket('Free')">Free Ticket</a>
+            <!--a class="btn btn-success" ng-click="addticket('Paid')">Paid Ticket</a>
+            <a class="btn btn-warning" ng-click="addticket('Donation')">Donation</a-->
+        </p>
+    </div>
+    <div class="text-center">
+       <div class="col-xs-1"></div>
+       <div class="col-xs-10 ticketdiv">
+        <table class="table">
+            <tr>
+                <th>Ticket Name*</th>
+                <th>Quantity Available</th>
+                <th>Price</th>
+                <th colspan="2">Action</th>
+            </tr>
+            <tr ng-repeat="ticket in form.tickets">
+                <td><input type="text" ng-model="ticket.ticket" placeholder="Example:Early Bird"></td>
+                <td><input type="text" ng-model="ticket.quantity" placeholder="100"></td>
+                <td><input type="text" ng-model="ticket.amount" ng-show="ticket.tickettype!='Free'"></td>
+                <td><label ng-model="ticket.tickettype">{{ticket.tickettype}}</label></td>
+                <td><a class="btn btn-success" ng-click="remove($index)">Delete</a></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">Total Capacity{{total}}</td>
+            </tr>
+        </table>
+        
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    <hr>
+    <div class="eventform">
+        <h2 class="text-center">Additional Settings</h2>
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Listing Privacy</label>
+            </div>
+            <div class="col-xs-9">
+                <p>
+                   <!--input name="radio1" ng-model="user.accessleve" type="radio" value="1"-->
+                    <input type="radio" ng-model="form.listingtype" value="1" checked>Public Page</p>
+                    <div ng-show="form.listingtype==1">
+                    <pre id="response1"></pre>
+                    <tags-input ng-model="form.publicemails" placeholder="Add a Attendees"></tags-input>
+                    <input type="text" id="tags1" value="{{form.publicemails}}">
+                    </div>
+                <p>
+                    <input type="radio" ng-model="form.listingtype" value="2">Private Page</p>
+                    <div ng-show="form.listingtype==2">
+                    <pre id="response"></pre>
+                    <tags-input ng-model="form.emails" placeholder="Add a Attendees"></tags-input>
+                    <input type="hidden" id="tags" value="{{form.emails}}">
+                    </div>
+                
+            </div>
+        </div>
+        
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Event Type</label>
+            </div>
+            <div class="col-xs-9">
+                <select ng-model="form.category" id="category" multiple>
+                   
+                    <option ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row pad">
+            <div class="col-xs-3">
+                <label class="pull-right">Event Topic</label>
+            </div>
+            <div class="col-xs-9">
+                <select ng-model="form.topic" id="topic" multiple>
+                   <option>Select a topic</option>
+                    <option ng-repeat="topic in topics" value="{{topic.id}}">{{topic.name}}</option>
+                </select>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <hr>
+    <div class="eventform text-center final">
+        <h2>Nice job! You're almost done.</h2>
+
+        <p>
+            <button class="btn btn-info">Choose a design</button>
+            <a class="btn btn-success" ng-click="onsubmit(form)" onclick="sendTheMail(); return false;">Save &amp; Preview</a>
+            <button class="btn btn-success">Make your event live</button>
+
+        </p>
+    </div>
+</form>

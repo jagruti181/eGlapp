@@ -1,0 +1,38 @@
+<div class="col-xs-3">
+    <div class="panel panel-default dashboard">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="">
+                    Manage Events
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <div ng-include="template.dashboard"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-xs-9">
+    <form action="">
+        <div class="orderform featured-event">
+            <h2 class="text-center">Waitlist</h2>
+            
+
+            <label>Enable Waitlist:</label>
+            <p>
+                <input type="radio" name="2" value="Enable">Enable
+                <input type="radio" name="2" value="Disable">Disable
+            </p>
+
+
+            <div class="savechanges">
+                <button class="btn btn-large btn-success" type="button">Save Changes</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="clearfix"></div>

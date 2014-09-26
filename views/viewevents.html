@@ -1,0 +1,81 @@
+<div class="featured-event">
+    <div class="row">
+        <div class="col-xs-8 eventhead">
+            <h2>{{alldata.title}}</h2>
+            <p>{{alldata.organizername}}</p>
+            <p>From : {{alldata.startdate}} AT : {{alldata.starttime}}</p>
+            <p>To : {{alldata.enddate}} AT : {{alldata.endtime}}</p>
+            <p>Location : {{alldata.location}}</p>
+        </div>
+        <div class="col-xs-4 eventlogo">
+            <img src="eglapp/{{alldata.logo}}" class="img-responsive">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-8">
+           <div  ng-show="alldata.tickets==0">
+                <h3> !No Ticket information</h3>
+                </div>
+            <div class="eventdetails"  ng-show="alldata.tickets!=0">
+                <h3>Ticket information</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Type</th>
+                            <th>Remaing</th>
+                            <!--th>Quantity</th-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="ticket in alldata.tickets">
+                            <td>{{ticket.tickettype}}</td>
+                            <td>{{ticket.ticket}}</td>
+                            <td>{{ticket.quantity}} Tickets</td>
+                            <!--td>
+                                <select ng-model="quantity">
+                                    <option value="0">0&nbsp;</option>
+                                    <option value="1">1&nbsp;</option>
+                                    <option value="2">2&nbsp;</option>
+                                    <option value="3">3&nbsp;</option>
+                                    <option value="4">4&nbsp;</option>
+                                    <option value="5">5&nbsp;</option>
+                                    <option value="6">6&nbsp;</option>
+                                    <option value="7">7&nbsp;</option>
+                                    <option value="8">8&nbsp;</option>
+                                    <option value="9">9&nbsp;</option>
+                                    <option value="10">10&nbsp;</option>
+                                </select>
+                            </td-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <a href="#/ticket/{{alldata.id}}/{{user.id}}" class="btn btn-success">Get Ticket</a>
+            </div>
+
+            <div class="eventdetails">
+                <h3>Event details</h3>
+                <p ng-bind-html="alldata.description"></p>
+             </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="eventdetails">
+                <h3>When</h3>
+                <p>From : {{alldata.startdate}} AT : {{alldata.starttime}}</p>
+            <p>To : {{alldata.enddate}} AT : {{alldata.endtime}}</p>
+            <p>Location : {{alldata.location}}</p>
+            </div>
+
+            <div class="eventdetails">
+                <h3>Oraganiser</h3>
+                <h4>{{alldata.organizername}}</h4>
+                <p ng-bind-html="alldata.orgdescription"></p>
+            </div>
+            <a href="#/sponsor/{{alldata.id}}" class="btn btn-primary">Sponsor Event</a>
+        </div>
+        
+    </div>
+    
+
+</div>
